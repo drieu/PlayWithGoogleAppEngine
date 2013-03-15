@@ -1,0 +1,33 @@
+#{extends 'main.html' /}
+#{set title:'Forms' /}
+
+<form action="/alert" method="post">
+    <br/>
+    <fieldset>
+        <label>Date</label>
+        <input name="date" type="text" id="date" value="01/01/13" />
+    </fieldset>
+
+    <br/>
+    <fieldset>
+        <label>level</label>
+        <input name="level" type="text" id="level" value="WARN" />
+    </fieldset>
+
+    <br/>
+    <fieldset>
+        <label>servers</label>
+        <input name="servers" type="text" id="servers" value="SERV 1"/>
+    </fieldset>
+
+    <br/>
+    <fieldset>
+        <label>msg</label>
+        <input name="msg" type="text" id="msg" value="Couldn't"/>
+    </fieldset>
+
+    <br/>
+    <fieldset>
+        <input type="submit" value="Ajouter" id="add"/>
+    </fieldset>
+</form>

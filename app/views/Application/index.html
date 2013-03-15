@@ -1,0 +1,29 @@
+#{extends 'main.html' /}
+#{set title:'Home' /}
+
+<p>
+<h2>Liste des alertes :</h2>
+
+
+<table id="customers">
+    <thead>
+    <tr>
+        <th>Date</th>
+        <th>Level</th>
+        <th>Server</th>
+        <th>Message</th>
+    </tr>
+    </thead>
+    <tbody>
+    #{if (alerts != null) }
+    #{list items:alerts, as:'alert'}
+    <tr>
+        <td>${alert.date}</td>
+        <td>${alert.level}</td>
+        <td>${alert.servers}</td>
+        <td>${alert.msg}</td>
+    </tr>
+    #{/list}
+    #{/if}
+    </tbody>
+</table>
